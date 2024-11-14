@@ -1,0 +1,15 @@
+import numpy as np
+def string_most(arr):
+    vowels=set("aeiou")
+def count_vowels(s):
+    return len(s.lower() & vowels)
+max=-1
+res_str=None
+for s in arr:
+    vowel_count=count_vowels(s)
+if(vowel_count>max or vowel_count==max and s<res_str):
+    max=vowel_count
+    res_str=s
+    return res_str
+arr=np.array(["sad","happy","good","bad","nice"])
+print(string_most(arr))
